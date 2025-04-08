@@ -8,7 +8,7 @@ const Home = () => {
   const [cartCount, setCartCount] = useState(0);
 
   useEffect(() => {
-    axios.get("https://playshifu-backend.onrender.com")
+    axios.get("https://playshifu-backend.onrender.com/api/products")
       .then((res) => {
         console.log("API Response:", res.data);
         if (Array.isArray(res.data)) {
